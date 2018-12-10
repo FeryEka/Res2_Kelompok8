@@ -2,11 +2,16 @@ package res2_laundry;
 
 import java.sql.*;
 import java.text.SimpleDateFormat;
+<<<<<<< HEAD
 import Koneksi.DB_form;
+=======
+import koneksi.DB_form;
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
 import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
+<<<<<<< HEAD
 public class View extends javax.swing.JFrame {
 
     DB_form con;
@@ -14,6 +19,15 @@ public class View extends javax.swing.JFrame {
     private String[] label = {"KODE PELANGGAN", "TANGGAL", "NAMA PELANGGAN", "NO TELP", "ALAMAT", "BERAT PAKAIAN", "HARGA", "TOTAL BAYAR", "BAYAR" ,"KEMBALIAN"};
     
     public View() {
+=======
+public class Veiw extends javax.swing.JFrame {
+
+    DB_form con;
+    private Object[][] tblBiodata = null;
+    private String[] label = {"KODE PELANGGAN", "TANGGAL", "NAMA PELANGGAN", "NO TELP", "ALAMAT", "BERAT PAKAIAN", "HARGA", "TOTAL BAYAR"};
+
+    public Veiw() {
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
         initComponents();
         con = new DB_form();
         con.Class();
@@ -45,8 +59,11 @@ public class View extends javax.swing.JFrame {
                 tblBiodata[x][5] = con.rs.getString("BeratPakaian");
                 tblBiodata[x][6] = con.rs.getString("Harga");
                 tblBiodata[x][7] = con.rs.getString("TotalBayar");
+<<<<<<< HEAD
                 tblBiodata[x][8] = con.rs.getString("BayarUang");
                 tblBiodata[x][9] = con.rs.getString("Kembalian");
+=======
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
                 x++;
             }
             FTABELDATA.setModel(new DefaultTableModel(tblBiodata, label));
@@ -75,6 +92,7 @@ public class View extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
     }
+<<<<<<< HEAD
     
     private void update(){
         int ok = JOptionPane.showConfirmDialog(null, "Data Anda Akan Dirubah?", "Konfirmasi Update", JOptionPane.YES_NO_OPTION);
@@ -112,19 +130,28 @@ public class View extends javax.swing.JFrame {
         }
         
     }
+=======
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
 
     private void setTabel() {
         int row = FTABELDATA.getSelectedRow();
         Kode_p.setText((String) FTABELDATA.getValueAt(row, 0));
         tanggal.setText((String) FTABELDATA.getValueAt(row, 1));
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
         nama_p.setText((String) FTABELDATA.getValueAt(row, 2));
         no_tlp.setText((String) FTABELDATA.getValueAt(row, 3));
         alamat.setText((String) FTABELDATA.getValueAt(row, 4));
         Berat_pakaian1.setText((String) FTABELDATA.getValueAt(row, 5));
         fharga.setText((String) FTABELDATA.getValueAt(row, 6));
         Total_bayar.setText((String) FTABELDATA.getValueAt(row, 7));
+<<<<<<< HEAD
         bayaruang.setText((String) FTABELDATA.getValueAt(row, 8));
         kembalian.setText((String) FTABELDATA.getValueAt(row, 9));
+=======
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
     }
 
     private void cari() {
@@ -150,8 +177,11 @@ public class View extends javax.swing.JFrame {
                 tblBiodata[x][5] = con.rs.getString("BeratPakaian");
                 tblBiodata[x][6] = con.rs.getString("Harga");
                 tblBiodata[x][7] = con.rs.getString("TotalBayar");
+<<<<<<< HEAD
                 tblBiodata[x][8] = con.rs.getString("BayarUang");
                 tblBiodata[x][9] = con.rs.getString("Kembalian");
+=======
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
                 x++;
             }
             FTABELDATA.setModel(new DefaultTableModel(tblBiodata, label));
@@ -191,11 +221,14 @@ public class View extends javax.swing.JFrame {
         kembali = new javax.swing.JButton();
         cari = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
+<<<<<<< HEAD
         bayaruang = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         kembalian = new javax.swing.JTextField();
         Update = new javax.swing.JButton();
+=======
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -238,14 +271,20 @@ public class View extends javax.swing.JFrame {
         alamat.setRows(5);
         jScrollPane2.setViewportView(alamat);
 
+<<<<<<< HEAD
         fharga.setEditable(false);
+=======
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
         fharga.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fhargaActionPerformed(evt);
             }
         });
 
+<<<<<<< HEAD
         Total_bayar.setEditable(false);
+=======
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
         Total_bayar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Total_bayarActionPerformed(evt);
@@ -291,6 +330,7 @@ public class View extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setText("CARI");
 
+<<<<<<< HEAD
         bayaruang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bayaruangActionPerformed(evt);
@@ -321,6 +361,8 @@ public class View extends javax.swing.JFrame {
             }
         });
 
+=======
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -336,6 +378,7 @@ public class View extends javax.swing.JFrame {
                                 .addGap(44, 44, 44)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -386,24 +429,70 @@ public class View extends javax.swing.JFrame {
                                             .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                             .addComponent(kembalian, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+=======
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(70, 70, 70)
+                                        .addComponent(tanggal, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, 0)
+                                        .addComponent(Berat_pakaian1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(Kode_p, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(50, 50, 50)
+                                        .addComponent(fharga, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(nama_p, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(50, 50, 50)
+                                        .addComponent(Total_bayar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(70, 70, 70)
+                                        .addComponent(no_tlp, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(50, 50, 50)
+                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(59, 59, 59)
+                                        .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(28, 28, 28)
+                                        .addComponent(kembali))))
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
                             .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(jLabel9)
                                 .addGap(18, 18, 18)
                                 .addComponent(cari, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+<<<<<<< HEAD
                         .addGap(0, 0, Short.MAX_VALUE)))
+=======
+                        .addGap(0, 260, Short.MAX_VALUE)))
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addContainerGap(30, Short.MAX_VALUE)
+=======
+                .addContainerGap(27, Short.MAX_VALUE)
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+<<<<<<< HEAD
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -451,6 +540,38 @@ public class View extends javax.swing.JFrame {
                             .addComponent(Delete)
                             .addComponent(kembali)
                             .addComponent(Update))))
+=======
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(tanggal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(Berat_pakaian1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(Kode_p, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(fharga, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(nama_p, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8)
+                    .addComponent(Total_bayar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(no_tlp, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Delete)
+                            .addComponent(kembali))))
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
                 .addContainerGap())
         );
 
@@ -462,7 +583,12 @@ public class View extends javax.swing.JFrame {
     }//GEN-LAST:event_DeleteActionPerformed
 
     private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
+<<<<<<< HEAD
         new Res2_Laundry().show();
+=======
+        Loundry_T zz;
+        zz = new Loundry_T();
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
         this.dispose();
     }//GEN-LAST:event_kembaliActionPerformed
 
@@ -490,6 +616,7 @@ public class View extends javax.swing.JFrame {
         cari();
     }//GEN-LAST:event_cariKeyReleased
 
+<<<<<<< HEAD
     private void bayaruangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bayaruangActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bayaruangActionPerformed
@@ -506,6 +633,8 @@ public class View extends javax.swing.JFrame {
         update();
     }//GEN-LAST:event_UpdateActionPerformed
 
+=======
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
     /**
      * @param args the command line arguments
      */
@@ -523,6 +652,7 @@ public class View extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
+<<<<<<< HEAD
             java.util.logging.Logger.getLogger(View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
             java.util.logging.Logger.getLogger(View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
@@ -530,13 +660,26 @@ public class View extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+=======
+            java.util.logging.Logger.getLogger(Veiw.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Veiw.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Veiw.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Veiw.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+<<<<<<< HEAD
                 new View().setVisible(true);
+=======
+                new Veiw().setVisible(true);
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
             }
         });
     }
@@ -547,6 +690,7 @@ public class View extends javax.swing.JFrame {
     private javax.swing.JTable FTABELDATA;
     private javax.swing.JTextField Kode_p;
     private javax.swing.JTextField Total_bayar;
+<<<<<<< HEAD
     private javax.swing.JButton Update;
     private javax.swing.JTextArea alamat;
     private javax.swing.JTextField bayaruang;
@@ -555,6 +699,12 @@ public class View extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+=======
+    private javax.swing.JTextArea alamat;
+    private javax.swing.JTextField cari;
+    private javax.swing.JTextField fharga;
+    private javax.swing.JLabel jLabel1;
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -566,7 +716,10 @@ public class View extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton kembali;
+<<<<<<< HEAD
     private javax.swing.JTextField kembalian;
+=======
+>>>>>>> 9efd91911e9a983712f7a784bbb619305e838008
     private javax.swing.JTextField nama_p;
     private javax.swing.JTextField no_tlp;
     private javax.swing.JTextField tanggal;
