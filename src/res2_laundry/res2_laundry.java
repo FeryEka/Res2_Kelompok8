@@ -1,6 +1,20 @@
+<<<<<<< HEAD
 package res2_laundry;
 
 import java.awt.event.KeyEvent;
+=======
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package res2_laundry;
+
+/**
+ *
+ * @author Fery Eka Mahendra
+ */
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -210,6 +224,7 @@ public final class res2_laundry extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+
         jLabelstatus = new javax.swing.JLabel();
         Finsert = new javax.swing.JButton();
         Berat_pakaian1 = new javax.swing.JTextField();
@@ -291,6 +306,7 @@ public final class res2_laundry extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+
         TABLE.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TABLEMouseClicked(evt);
@@ -368,6 +384,7 @@ public final class res2_laundry extends javax.swing.JFrame {
         jLabel8.setText("Total Bayar");
         getContentPane().add(jLabel8);
         jLabel8.setBounds(280, 130, 70, 14);
+		
         getContentPane().add(jLabelstatus);
         jLabelstatus.setBounds(590, 10, 140, 20);
 
@@ -461,7 +478,7 @@ public final class res2_laundry extends javax.swing.JFrame {
         Total_bayar.setText(String.valueOf(bayar));
         fharga.setText(String.valueOf(harga));
     }//GEN-LAST:event_Berat_pakaian1ActionPerformed
-
+	
     /**
      * @param args the command line arguments
      */
@@ -487,7 +504,6 @@ public final class res2_laundry extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(res2_laundry.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
